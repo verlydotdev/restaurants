@@ -10,11 +10,11 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "lint:fix": "turbo run lint:fix"
   },
   "devDependencies": {
-    "prettier": "latest",
-    "turbo": "latest"
+    "turbo": "latest",
+    "@verlydotdev/eslint-config-custom": "workspace:*"
   },
   "engines": {
     "node": ">=14.0.0"
