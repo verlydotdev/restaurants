@@ -13,8 +13,9 @@
     "lint:fix": "turbo run lint:fix"
   },
   "devDependencies": {
-    "turbo": "latest",
-    "@verlydotdev/eslint-config-custom": "workspace:*"
+    "@verlydotdev/eslint-config-custom": "workspace:*",
+    "prettier": "^2.8.1",
+    "turbo": "latest"
   },
   "engines": {
     "node": ">=14.0.0"
