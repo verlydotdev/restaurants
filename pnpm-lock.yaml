@@ -6,10 +6,12 @@ importers:
     specifiers:
       '@verlydotdev/eslint-config-custom': workspace:*
       prettier: ^2.8.1
+      prettier-plugin-tailwindcss: ^0.2.1
       turbo: latest
     devDependencies:
       '@verlydotdev/eslint-config-custom': link:packages/eslint-config-custom
       prettier: 2.8.1
+      prettier-plugin-tailwindcss: 0.2.1_prettier@2.8.1
       turbo: 1.6.3
 
   apps/menu:
@@ -5661,6 +5663,15 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
     dev: false
+
+  /prettier-plugin-tailwindcss/0.2.1_prettier@2.8.1:
+    resolution: {integrity: sha512-aIO8IguumORyRsmT+E7JfJ3A9FEoyhqZR7Au7TBOege3VZkgMvHJMkufeYp4zjnDK2iq4ktkvGMNOQR9T8lisQ==}
+    engines: {node: '>=12.17.0'}
+    peerDependencies:
+      prettier: '>=2.2.0'
+    dependencies:
+      prettier: 2.8.1
+    dev: true
 
   /prettier/2.8.1:
     resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}

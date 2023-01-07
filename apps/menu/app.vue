@@ -1,6 +1,4 @@
 <script setup>
-import { ref } from "vue";
-
 const text = ref("Restaurants menu");
 
 const test = ref(false);
@@ -12,7 +10,7 @@ const toggle = () => {
 
 <template>
   <div class="m-4">
-    <h1 class="text-2xl font-bold">{{ text }}</h1>
+    <h1 class="title">{{ text }}</h1>
     <button @click="toggle()">Toggle</button>
 
     <div v-if="test" class="test">Test content2</div>
@@ -20,8 +18,7 @@ const toggle = () => {
 </template>
 
 <style scoped>
-.test {
-  margin-top: 1rem;
-  background-color: red;
+.title {
+  @apply bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3;
 }
 </style>
