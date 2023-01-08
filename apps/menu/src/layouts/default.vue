@@ -2,7 +2,7 @@
 const restaurantName = ref("Mola!");
 const restaurantAddress = ref("Calle de la Luna, 1");
 
-const [isRestaurantOpen, toggleRestaurantOpen] = useToggle()
+const [isRestaurantOpen, toggleRestaurantOpen] = useToggle();
 </script>
 
 <template>
@@ -26,7 +26,7 @@ const [isRestaurantOpen, toggleRestaurantOpen] = useToggle()
             'bg-green-500': isRestaurantOpen,
             'bg-red-500': !isRestaurantOpen,
           }"
-          @click="toggleRestaurantOpen"
+          @click="toggleRestaurantOpen()"
         >
           {{ isRestaurantOpen ? "Abierto" : "Cerrado" }}
         </button>
