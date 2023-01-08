@@ -35,9 +35,11 @@ const toggleRestaurantOpen = () => {
         </button>
       </div>
     </div>
+
+    <SearchInput />
   </header>
 
-  <main class="p-4">
+  <main>
     <slot></slot>
   </main>
 </template>
