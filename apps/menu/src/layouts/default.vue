@@ -2,10 +2,7 @@
 const restaurantName = ref("Mola!");
 const restaurantAddress = ref("Calle de la Luna, 1");
 
-const isRestaurantOpen = ref(true);
-const toggleRestaurantOpen = () => {
-  isRestaurantOpen.value = !isRestaurantOpen.value;
-};
+const [isRestaurantOpen, toggleRestaurantOpen] = useToggle()
 </script>
 
 <template>
