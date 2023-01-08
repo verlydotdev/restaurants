@@ -22,4 +22,11 @@ export default defineNuxtConfig({
     preset: "netlify",
   },
   srcDir: "src",
+  runtimeConfig: {
+    public: {
+      pocketbase: {
+        url: process.env.POCKETBASE_URL,
+      },
+    },
+  },
 });

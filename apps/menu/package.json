@@ -20,5 +20,8 @@
     "@vueuse/nuxt": "^9.10.0",
     "nuxt": "3.0.0",
     "unplugin-icons": "^0.15.1"
+  },
+  "dependencies": {
+    "pocketbase": "^0.9.1"
   }
 }

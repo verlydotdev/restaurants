@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import SeachIcon from "~icons/mingcute/search-line";
+
 const { t: $t } = useI18n();
 </script>
+
 <template>
   <!-- Barra de búsqueda -->
   <div class="relative mt-4">

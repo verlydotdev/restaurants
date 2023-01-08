@@ -1,3 +1,23 @@
+<script setup lang="ts">
+import { ListResult } from "pocketbase";
+
+const $pocketbase = usePocketbase();
+
+const { data: categories } = await useAsyncData<ListResult<ICategory>>(
+  "categories",
+  async () => {
+    const list = await $pocketbase
+      .collection("categories")
+      .getList<ICategory>();
+
+    return {
+      ...list,
+      items: JSON.parse(JSON.stringify(list.items)),
+    };
+  }
+);
+</script>
+
 <template>
   <!-- Tarjeta descriptiva -->
   <div class="bg-image h-40">
@@ -13,10 +33,13 @@
   </div>
 
   <!-- Categorías -->
-  <div class="indigo-500 mt-4 bg-sky-300 text-white">
+  <div
+    class="indigo-500 mt-4 bg-sky-300 text-white"
+    v-for="category in categories?.items"
+  >
     <!-- Título y ver todo -->
     <div class="flex items-center justify-between p-4">
-      <span class="text-2xl font-bold">Salsas clásicas</span>
+      <span class="text-2xl font-bold">{{ category.name }}</span>
 
       <span class="text-sm">Ver todo</span>
     </div>
