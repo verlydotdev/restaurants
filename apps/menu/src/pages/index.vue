@@ -1,21 +1,14 @@
 <script setup lang="ts">
-import { ListResult } from "pocketbase";
+// interfaces
+import ICategory from "../interfaces/ICategory";
 
-const $pocketbase = usePocketbase();
+const { $i18n, $pb } = useNuxtApp();
 
-const { data: categories } = await useAsyncData<ListResult<ICategory>>(
-  "categories",
-  async () => {
-    const list = await $pocketbase
-      .collection("categories")
-      .getList<ICategory>();
+const { data: categories } = await useAsyncData<ICategory[]>(async () => {
+  const records = await $pb.collection("categories").getFullList<ICategory>();
 
-    return {
-      ...list,
-      items: JSON.parse(JSON.stringify(list.items)),
-    };
-  }
-);
+  return structuredClone(records);
+});
 </script>
 
 <template>
@@ -33,39 +26,8 @@ const { data: categories } = await useAsyncData<ListResult<ICategory>>(
   </div>
 
   <!-- Categorías -->
-  <div
-    class="indigo-500 mt-4 bg-sky-300 text-white"
-    v-for="category in categories?.items"
-  >
-    <!-- Título y ver todo -->
-    <div class="flex items-center justify-between p-4">
-      <span class="text-2xl font-bold">{{ category.name }}</span>
-
-      <span class="text-sm">Ver todo</span>
-    </div>
-
-    <!-- Artículos -->
-    <div class="grid grid-cols-2 gap-4 px-4 pb-4">
-      <div class="flex flex-col">
-        <div
-          class="h-40 rounded-lg bg-white bg-[url('https://dam.cocinafacil.com.mx/wp-content/uploads/2014/11/pasta-pomodoro.jpg')] bg-cover bg-center p-4 shadow-lg"
-        ></div>
-
-        <span class="my-2 text-xl font-bold">Pomodoro</span>
-        <span class="text-sm text-black"
-          >Tomate italiano y un toque de albahaca...</span
-        >
-      </div>
-
-      <div class="flex flex-col">
-        <div
-          class="h-40 rounded-lg bg-white bg-[url('https://www.halfbakedharvest.com/wp-content/uploads/2021/12/My-Familys-Favorite-Pesto-Pasta-Bolognese-1.jpg')] bg-cover bg-center p-4 shadow-lg"
-        ></div>
-
-        <span class="my-2 text-xl font-bold">Bolognese</span>
-        <span class="text-sm text-black">Ragout auténtico de ternera</span>
-      </div>
-    </div>
+  <div v-for="category in categories?.items">
+    <Category :category="category" />
   </div>
 </template>
 

@@ -5,3 +5,5 @@ class ICategory {
     return { ...this };
   }
 }
+
+export default ICategory;
