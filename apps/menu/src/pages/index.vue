@@ -25,7 +25,7 @@ const { data: groups } = await useAsyncData<IGroup[]>(
           return dish;
         });
 
-        return record;
+        return JSON.parse(JSON.stringify(record));
       });
     },
   }
