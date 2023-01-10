@@ -12,8 +12,8 @@ export interface ModuleOptions {
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: "ui-service",
-    configKey: "uiService",
+    name: "backend-module",
+    configKey: "backendModule",
   },
   defaults: {
     addPlugin: true,
