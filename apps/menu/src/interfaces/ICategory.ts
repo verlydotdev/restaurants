@@ -1,9 +1,7 @@
-class ICategory {
-  public name!: string;
+import IPocketbaseItem from "./IPocketbaseItem";
 
-  toJson() {
-    return { ...this };
-  }
+interface ICategory extends IPocketbaseItem {
+  name: string;
 }
 
 export default ICategory;
