@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import SeachIcon from "~icons/mingcute/search-line";
-
-const { t: $t } = useI18n();
 </script>
 
 <template>
@@ -16,7 +14,7 @@ const { t: $t } = useI18n();
     <input
       type="search"
       class="search-input"
-      :placeholder="$t('general.search')"
+      placeholder="¿Que te apetece?..."
       required
     />
   </div>

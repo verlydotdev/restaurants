@@ -2,13 +2,16 @@
 // interfaces
 import ICategory from "../interfaces/ICategory";
 
-const { $i18n, $pb } = useNuxtApp();
+const { $pb } = useNuxtApp();
 
-const { data: categories } = await useAsyncData<ICategory[]>(async () => {
-  const records = await $pb.collection("categories").getFullList<ICategory>();
+const { data: categories } = await useAsyncData<ICategory[]>(
+  "categories",
+  async () => {
+    const records = await $pb.collection("categories").getFullList<ICategory>();
 
-  return structuredClone(records);
-});
+    return structuredClone(records);
+  }
+);
 </script>
 
 <template>
@@ -26,7 +29,7 @@ const { data: categories } = await useAsyncData<ICategory[]>(async () => {
   </div>
 
   <!-- Categorías -->
-  <div v-for="category in categories?.items">
+  <div v-for="category in categories">
     <Category :category="category" />
   </div>
 </template>

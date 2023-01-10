@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ListResult } from "pocketbase";
-
 // interfaces
 import ICategory from "../interfaces/ICategory";
 
