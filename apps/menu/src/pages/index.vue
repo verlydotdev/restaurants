@@ -1,15 +1,33 @@
 <script setup lang="ts">
 // interfaces
-import ICategory from "../interfaces/ICategory";
+import IDish from "../interfaces/IDish";
+import IGroup from "../interfaces/IGroup";
+
+const restaurantName = ref("Mola! - Tienda de pastas");
 
 const { $pb } = useNuxtApp();
 
-const { data: categories } = await useAsyncData<ICategory[]>(
-  "categories",
+const { data: groups } = await useAsyncData<IGroup[]>(
+  "groups",
   async () => {
-    const records = await $pb.collection("categories").getFullList<ICategory>();
+    const records = await $pb.collection("groups").getFullList<IGroup>(200, {
+      expand: "dishes",
+    });
 
-    return structuredClone(records);
+    return records;
+  },
+  {
+    transform: (records) => {
+      return records.map((record) => {
+        record.dishes = record.expand.dishes.map((dish: IDish) => {
+          dish.image = $pb.getFileUrl(dish, dish.image);
+
+          return dish;
+        });
+
+        return record;
+      });
+    },
   }
 );
 </script>
@@ -19,7 +37,7 @@ const { data: categories } = await useAsyncData<ICategory[]>(
   <div class="bg-image h-40">
     <div class="flex flex-col p-4 text-white">
       <!-- Texto -->
-      <span class="mb-2 text-2xl font-bold">Mola! - Tienda de pastas</span>
+      <span class="mb-2 text-2xl font-bold">{{ restaurantName }}</span>
 
       <span class="font-bold">Cocinar es un acto de amor</span>
       <span
@@ -29,7 +47,7 @@ const { data: categories } = await useAsyncData<ICategory[]>(
   </div>
 
   <!-- Categorías -->
-  <Category v-for="category in categories" :category="category" />
+  <Group v-for="group in groups" :group="group" />
 </template>
 
 <style>

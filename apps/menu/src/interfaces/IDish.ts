@@ -1,6 +1,6 @@
-import IPocketbaseItem from "./IPocketbaseItem";
+import { Record } from "pocketbase";
 
-interface IDish extends IPocketbaseItem {
+interface IDish extends Record {
   id: string;
   name: string;
   image: string;
