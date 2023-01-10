@@ -1,5 +1,10 @@
 import { fileURLToPath } from "url";
-import { addPlugin, createResolver, defineNuxtModule } from "@nuxt/kit";
+import {
+  addPlugin,
+  createResolver,
+  defineNuxtModule,
+  useLogger,
+} from "@nuxt/kit";
 
 export interface ModuleOptions {
   addPlugin: boolean;
@@ -22,8 +27,8 @@ export default defineNuxtModule<ModuleOptions>({
     }
 
     nuxt.hook("ready", () => {
-      // eslint-disable-next-line no-console
-      console.log("✔ Loaded @verlydotdev/ui-service module successfully");
+      const logger = useLogger();
+      logger.success("Loaded @verlydotdev/ui-service module successfully");
     });
   },
 });

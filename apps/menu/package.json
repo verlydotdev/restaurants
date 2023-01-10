@@ -23,6 +23,6 @@
   },
   "dependencies": {
     "pocketbase": "^0.9.1",
-    "@verlydotdev/ui-service": "*"
+    "@verlydotdev/nuxt-backend-module": "*"
   }
 }

@@ -1,6 +1,6 @@
 {
-  "name": "@verlydotdev/ui-service",
-  "version": "1.0.0",
+  "name": "@verlydotdev/nuxt-backend-module",
+  "version": "0.0.0",
   "type": "module",
   "exports": {
     ".": {
