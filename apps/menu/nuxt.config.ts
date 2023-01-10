@@ -5,7 +5,11 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     // "@nuxtjs/i18n",
     "unplugin-icons/nuxt",
+    "@verlydotdev/ui-service",
   ],
+  uiService: {
+    addPlugin: true,
+  },
   // i18n: {
   //   baseUrl: process.env.BASE_URL,
   //   langDir: "locales",

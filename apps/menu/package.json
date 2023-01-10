@@ -22,6 +22,7 @@
     "unplugin-icons": "^0.15.1"
   },
   "dependencies": {
-    "pocketbase": "^0.9.1"
+    "pocketbase": "^0.9.1",
+    "@verlydotdev/ui-service": "*"
   }
 }

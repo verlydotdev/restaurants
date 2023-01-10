@@ -11,8 +11,14 @@
     "lint:fix": {
       "outputs": []
     },
+    "prepack": {
+      "dependsOn": ["^prepack"],
+      "outputs": ["dist/**"]
+    },
     "dev": {
-      "cache": false
+      "cache": false,
+      "env": ["POCKETBASE_URL"],
+      "dependsOn": ["prepack"]
     }
   }
 }
