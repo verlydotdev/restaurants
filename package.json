@@ -11,7 +11,8 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "first-install": "npm install --ignore-scripts && npm run prepare"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.0",

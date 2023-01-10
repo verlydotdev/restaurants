@@ -22,9 +22,6 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: "@verlydotdev/tailwind-preset/globals.css",
   },
-  nitro: {
-    preset: "netlify",
-  },
   srcDir: "src",
   runtimeConfig: {
     public: {
