@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // interfaces
-import IDish from "../interfaces/IDish";
+import type IDish from "../interfaces/IDish";
 
 defineProps<{
   dish: IDish;
@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <div :key="dish.id" class="flex w-60 flex-col p-4">
+  <div class="flex w-60 flex-col p-4">
     <div class="mb-2 rounded bg-white shadow-lg">
       <img :src="dish.image" class="h-full w-full rounded object-cover" />
     </div>

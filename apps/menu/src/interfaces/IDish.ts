@@ -1,4 +1,4 @@
-import { Record } from "pocketbase";
+import type { Record } from "pocketbase";
 
 interface IDish extends Record {
   id: string;

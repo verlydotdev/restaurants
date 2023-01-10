@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // interfaces
-import IGroup from "../interfaces/IGroup";
+import type IGroup from "../interfaces/IGroup";
 
 // props
 defineProps<{
@@ -19,7 +19,7 @@ defineProps<{
 
     <!-- Lista de platos -->
     <div class="flex overflow-x-scroll">
-      <Dish v-for="dish in group.dishes" :dish="dish" />
+      <DishItem v-for="dish in group.dishes" :key="dish.id" :dish="dish" />
     </div>
   </div>
 </template>

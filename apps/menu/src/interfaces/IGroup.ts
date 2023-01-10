@@ -1,5 +1,4 @@
-import { Record } from "pocketbase";
-import IDish from "./IDish";
+import type { Record } from "pocketbase";
 
 interface ICategory extends Record {
   name: string;

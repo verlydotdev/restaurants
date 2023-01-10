@@ -8,8 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint": "eslint --ext .ts,.vue",
+    "lint:fix": "eslint --ext .ts,.vue --fix"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.3",

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // interfaces
-import IDish from "../interfaces/IDish";
-import IGroup from "../interfaces/IGroup";
+import type IDish from "../interfaces/IDish";
+import type IGroup from "../interfaces/IGroup";
 
 const restaurantName = ref("Mola! - Tienda de pastas");
 
@@ -33,21 +33,23 @@ const { data: groups } = await useAsyncData<IGroup[]>(
 </script>
 
 <template>
-  <!-- Tarjeta descriptiva -->
-  <div class="bg-image h-40">
-    <div class="flex flex-col p-4 text-white">
-      <!-- Texto -->
-      <span class="mb-2 text-2xl font-bold">{{ restaurantName }}</span>
+  <div>
+    <!-- Tarjeta descriptiva -->
+    <div class="bg-image h-40">
+      <div class="flex flex-col p-4 text-white">
+        <!-- Texto -->
+        <span class="mb-2 text-2xl font-bold">{{ restaurantName }}</span>
 
-      <span class="font-bold">Cocinar es un acto de amor</span>
-      <span
-        >Prueba nuestros tagliatelle frescos con la salsa que tu elijas</span
-      >
+        <span class="font-bold">Cocinar es un acto de amor</span>
+        <span
+          >Prueba nuestros tagliatelle frescos con la salsa que tu elijas</span
+        >
+      </div>
     </div>
-  </div>
 
-  <!-- Categorías -->
-  <Group v-for="group in groups" :group="group" />
+    <!-- Categorías -->
+    <GroupItem v-for="group in groups" :key="group.id" :group="group" />
+  </div>
 </template>
 
 <style>
