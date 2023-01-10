@@ -29,9 +29,7 @@ const { data: categories } = await useAsyncData<ICategory[]>(
   </div>
 
   <!-- Categorías -->
-  <div v-for="category in categories">
-    <Category :category="category" />
-  </div>
+  <Category v-for="category in categories" :category="category" />
 </template>
 
 <style>

@@ -18,7 +18,7 @@ const { data: dishes } = await useAsyncData<IDish[]>("dishes", async () => {
 </script>
 
 <template>
-  <div class="indigo-500 mt-4 bg-sky-300 text-white">
+  <div class="mt-4 bg-sky-300 text-white">
     <!-- Título y ver todo -->
     <div class="flex items-center justify-between px-4 pt-4 pb-2">
       <span class="text-2xl font-bold">{{ category.name }}</span>
@@ -28,9 +28,7 @@ const { data: dishes } = await useAsyncData<IDish[]>("dishes", async () => {
 
     <!-- Lista de platos -->
     <div class="flex overflow-x-scroll">
-      <div v-for="dish in dishes">
-        <Dish :dish="dish" />
-      </div>
+      <Dish v-for="dish in dishes" :dish="dish" />
     </div>
   </div>
 </template>
