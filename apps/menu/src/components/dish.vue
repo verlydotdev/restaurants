@@ -10,13 +10,15 @@ const imageUrl = useGetImageUrl(props.dish);
 </script>
 
 <template>
-  <div :key="dish.id" class="m-4 flex h-64 w-64 flex-col">
-    <div class="mb-2 h-48 w-48 rounded bg-white shadow-lg">
+  <div :key="dish.id" class="flex w-60 flex-col p-4">
+    <div class="mb-2 rounded bg-white shadow-lg">
       <img :src="imageUrl" class="h-full w-full rounded-full object-cover" />
     </div>
 
     <span class="text-lg font-bold">{{ dish.name }}</span>
 
-    <span class="text-sm text-gray-600">{{ dish.description }}</span>
+    <span class="line-clamp-2 text-sm leading-4 text-gray-600">
+      {{ dish.description }}</span
+    >
   </div>
 </template>
