@@ -1,30 +1,31 @@
 import { fileURLToPath } from "url";
 import {
   addPlugin,
+  addTemplate,
   createResolver,
   defineNuxtModule,
   useLogger,
 } from "@nuxt/kit";
 
 export interface ModuleOptions {
-  addPlugin: boolean;
+  pocketbaseURL: string;
 }
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: "async-content",
+    name: "@verlydotdev/nuxt-async-content",
     configKey: "asyncContent",
   },
-  defaults: {
-    addPlugin: true,
-  },
   setup(options, nuxt) {
-    if (options.addPlugin) {
-      const { resolve } = createResolver(import.meta.url);
-      const runtimeDir = fileURLToPath(new URL("./runtime", import.meta.url));
-      nuxt.options.build.transpile.push(runtimeDir);
-      addPlugin(resolve(runtimeDir, "plugin"));
-    }
+    const { resolve } = createResolver(import.meta.url);
+    const runtimeDir = fileURLToPath(new URL("./runtime", import.meta.url));
+    nuxt.options.build.transpile.push(runtimeDir);
+
+    // Add module options to runetime config so they can be accessed in the plugin
+    nuxt.options.runtimeConfig.public.asyncContent = options;
+
+    // Add the pligin that will provide the asyncContent helper to the nuxtapp context
+    addPlugin(resolve(runtimeDir, "plugin"));
 
     nuxt.hook("ready", () => {
       const logger = useLogger();

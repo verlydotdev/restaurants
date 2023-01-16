@@ -4,7 +4,7 @@ import AsyncContent from "..";
 export default defineNuxtConfig({
   telemetry: false,
   modules: [AsyncContent],
-  backendModule: {
-    addPlugin: true,
+  asyncContent: {
+    pocketbaseURL: "https://pocketbase.verly.dev",
   },
 });
