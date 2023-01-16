@@ -23,6 +23,6 @@
   },
   "dependencies": {
     "pocketbase": "^0.9.1",
-    "@verlydotdev/nuxt-backend-module": "*"
+    "@verlydotdev/nuxt-async-content": "*"
   }
 }

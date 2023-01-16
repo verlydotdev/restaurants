@@ -12,8 +12,8 @@ export interface ModuleOptions {
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: "backend-module",
-    configKey: "backendModule",
+    name: "async-content",
+    configKey: "asyncContent",
   },
   defaults: {
     addPlugin: true,
@@ -28,7 +28,9 @@ export default defineNuxtModule<ModuleOptions>({
 
     nuxt.hook("ready", () => {
       const logger = useLogger();
-      logger.success("Loaded @verlydotdev/ui-service module successfully");
+      logger.success(
+        "Loaded @verlydotdev/nuxt-async-content module successfully"
+      );
     });
   },
 });

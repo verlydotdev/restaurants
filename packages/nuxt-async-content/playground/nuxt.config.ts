@@ -1,9 +1,9 @@
 import { defineNuxtConfig } from "nuxt/config";
-import BackendModule from "..";
+import AsyncContent from "..";
 
 export default defineNuxtConfig({
   telemetry: false,
-  modules: [BackendModule],
+  modules: [AsyncContent],
   backendModule: {
     addPlugin: true,
   },
