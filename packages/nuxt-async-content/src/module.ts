@@ -1,7 +1,6 @@
 import { fileURLToPath } from "url";
 import {
   addPlugin,
-  addTemplate,
   createResolver,
   defineNuxtModule,
   useLogger,

@@ -1,4 +1,4 @@
-import { MenuBuilder } from "../lib";
+import { MenuBuilder } from "@verlydotdev/async-content-lib";
 import { defineNuxtPlugin } from "#imports";
 
 export default defineNuxtPlugin(() => {

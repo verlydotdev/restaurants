@@ -5,6 +5,6 @@ export default defineNuxtConfig({
   telemetry: false,
   modules: [AsyncContent],
   asyncContent: {
-    pocketbaseURL: "https://pocketbase.verly.dev",
+    pocketbaseURL: process.env.POCKETBASE_URL,
   },
 });

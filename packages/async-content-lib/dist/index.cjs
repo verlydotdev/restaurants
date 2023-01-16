@@ -1,0 +1,1 @@
+module.exports = require("/Users/gomez.luv/dev/verly/restaurants-client/node_modules/jiti/lib/index.js")(null, { interopDefault: true, esmResolve: true })("/Users/gomez.luv/dev/verly/restaurants-client/packages/async-content-lib/src/index.ts")

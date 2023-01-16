@@ -1,5 +1,7 @@
 import { normalizeURL } from "ufo";
-import MenuFacade from "./MenuFacade";
+import PocketBase from "pocketbase";
+import MenuFacade from "../../application/MenuFacade";
+import { GroupRepositoryPocketBase } from "../persistence";
 
 export default class MenuBuilder {
   private url?: string;
@@ -13,6 +15,8 @@ export default class MenuBuilder {
     if (!this.url) {
       throw new Error("URL is required");
     }
-    return new MenuFacade(normalizeURL(this.url));
+    return new MenuFacade(
+      new GroupRepositoryPocketBase(new PocketBase(normalizeURL(this.url)))
+    );
   }
 }
