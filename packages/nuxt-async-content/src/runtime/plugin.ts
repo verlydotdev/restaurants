@@ -1,12 +1,12 @@
 import { MenuBuilder } from "../lib";
 import { defineNuxtPlugin } from "#imports";
 
-export default defineNuxtPlugin((nuxt) => {
+export default defineNuxtPlugin(() => {
   const { asyncContent: options } = useRuntimeConfig().public;
 
   return {
     provide: {
-      asyncContent: new MenuBuilder().withURL(options.pocketbaseURL).build(),
+      menu: new MenuBuilder().withURL(options.pocketbaseURL).build(),
     },
   };
 });
