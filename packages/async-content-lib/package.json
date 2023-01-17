@@ -33,7 +33,7 @@
     "build": "unbuild",
     "prepack": "unbuild",
     "dev": "vitest dev",
-    "lint": "eslint .",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "start": "esno src/index.ts",
     "test": "vitest"
   },
