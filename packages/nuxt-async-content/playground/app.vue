@@ -1,13 +1,19 @@
 <script setup lang="ts">
+import type {
+  Group,
+  PaginationResponse,
+} from "@verlydotdev/async-content-lib/domain";
+
 const { $menu } = useNuxtApp();
-/* const { data, error } = useAsyncData<PaginationResponse<Group>>(
-  "menu",
-  async () => {
-    await $menu.getMainMenu();
-  }
-); */
+const { data, error } = useAsyncData<PaginationResponse<Group>>("menu", () =>
+  $menu.getMainMenu()
+);
 </script>
 
 <template>
-  <div>Nuxt module playground!</div>
+  <div>
+    <div>Nuxt module playground!</div>
+
+    <pre>{{ data }}</pre>
+  </div>
 </template>

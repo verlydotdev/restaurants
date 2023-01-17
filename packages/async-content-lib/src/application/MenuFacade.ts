@@ -1,8 +1,8 @@
 import logger from "consola";
-import type GroupRepository from "../domain/group/GroupRepository";
+import type { GroupRepository } from "../domain";
 class MenuFacade {
   constructor(private groupRepository: GroupRepository) {
-    logger.success(`MenuFacade created with`);
+    logger.success(`MenuFacade created`);
   }
 
   public getMainMenu() {

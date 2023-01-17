@@ -1,5 +1,10 @@
 import type PocketBase from "pocketbase";
-import type { Criteria, Group, GroupRepository } from "../../domain";
+import type {
+  Criteria,
+  Group,
+  GroupRepository,
+  PaginationResponse,
+} from "../../domain";
 import { PocketbaseListResponeToPaginationResponseMapper } from "../mappers";
 
 export default class GroupRepositoryPocketBase implements GroupRepository {

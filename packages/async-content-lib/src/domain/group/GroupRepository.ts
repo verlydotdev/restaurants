@@ -1,5 +1,5 @@
-import type { Criteria, Group } from "..";
+import type { Criteria, Group, PaginationResponse } from "../../domain";
 
-export default interface GroupRepository {
+export interface GroupRepository {
   getList(criteria?: Criteria): Promise<PaginationResponse<Group>>;
 }
