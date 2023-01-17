@@ -5,7 +5,7 @@ import type {
   GroupRepository,
   PaginationResponse,
 } from "../../types";
-import { PocketbaseListResponeToPaginationResponseMapper } from "../mappers";
+import PocketbaseListResponeToPaginationResponseMapper from "../mappers/PocketbaseListResponeToPaginationResponseMapper";
 
 export default class GroupRepositoryPocketBase implements GroupRepository {
   constructor(private readonly pocketbase: PocketBase) {}

@@ -1,7 +1,7 @@
 import { normalizeURL } from "ufo";
 import PocketBase from "pocketbase";
 import MenuFacade from "../../application/MenuFacade";
-import { GroupRepositoryPocketBase } from "../persistence";
+import GroupRepositoryPocketBase from "../persistence/GroupRepositoryPocketBase";
 
 export default class MenuBuilder {
   private url?: string;

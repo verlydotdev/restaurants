@@ -1,3 +1,3 @@
-import { MenuBuilder } from "./infrastructure/builders";
+import MenuBuilder from "./infrastructure/builders/MenuBuilder";
 
 export { MenuBuilder };
