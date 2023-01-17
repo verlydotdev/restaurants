@@ -1,4 +1,4 @@
-import type { GroupRepository } from "../domain";
+import type { GroupRepository } from "../types";
 class MenuFacade {
   constructor(private groupRepository: GroupRepository) {}
 

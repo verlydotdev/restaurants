@@ -4,7 +4,7 @@ import type {
   Group,
   GroupRepository,
   PaginationResponse,
-} from "../../domain";
+} from "../../types";
 import { PocketbaseListResponeToPaginationResponseMapper } from "../mappers";
 
 export default class GroupRepositoryPocketBase implements GroupRepository {
@@ -18,7 +18,9 @@ export default class GroupRepositoryPocketBase implements GroupRepository {
           .getList<Group>(criteria?.offset, criteria?.limit)
           .then((response) => {
             resolve(
-              PocketbaseListResponeToPaginationResponseMapper.map(response)
+              new PocketbaseListResponeToPaginationResponseMapper().map(
+                response
+              )
             );
           })
           .catch((error) => {

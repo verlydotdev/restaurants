@@ -1,4 +1,4 @@
-export interface DomainEntity {
+export interface BaseEntity {
   id: string;
   created: string;
   updated: string;

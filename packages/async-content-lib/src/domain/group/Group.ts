@@ -1,5 +1,5 @@
-import type { DomainEntity } from "../../domain";
+import type { BaseEntity } from "../common/BaseEntity";
 
-export interface Group extends DomainEntity {
+export interface Group extends BaseEntity {
   name: string;
 }

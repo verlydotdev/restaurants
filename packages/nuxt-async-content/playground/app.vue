@@ -2,7 +2,7 @@
 import type {
   Group,
   PaginationResponse,
-} from "@verlydotdev/async-content-lib/domain";
+} from "@verlydotdev/async-content-lib/types";
 
 const { $menu } = useNuxtApp();
 const { data, error } = useAsyncData<PaginationResponse<Group>>("menu", () =>

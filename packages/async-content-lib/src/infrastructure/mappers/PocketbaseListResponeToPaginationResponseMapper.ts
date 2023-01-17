@@ -1,9 +1,11 @@
 import type { ListResult } from "pocketbase";
-import type { Group, PaginationResponse } from "../../domain";
+import type { Group, Mapper, PaginationResponse } from "../../types";
 
-export default class PocketbaseListResponeToPaginationResponseMapper {
-  static map(response: ListResult<Group>): PaginationResponse<Group> {
-    const { items, totalItems, totalPages, page, perPage } = response;
+export default class PocketbaseListResponeToPaginationResponseMapper
+  implements Mapper<ListResult<Group>, PaginationResponse<Group>>
+{
+  map(from: ListResult<Group>): PaginationResponse<Group> {
+    const { items, totalItems, totalPages, page, perPage } = from;
     return {
       items,
       totalItems,
