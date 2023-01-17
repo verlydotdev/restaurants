@@ -1,4 +1,4 @@
-import type { Filter, Order } from "../../../types";
+import type { Filter, Order } from "../../types";
 
 export interface Criteria {
   filters?: Filter[];

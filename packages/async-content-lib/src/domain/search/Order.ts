@@ -1,4 +1,4 @@
-import type { OrderType } from "../../../types";
+import type { OrderType } from "../../types";
 
 export interface Order {
   field: string;
