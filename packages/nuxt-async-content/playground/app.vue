@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type {
   Group,
-  PaginationResponse,
+  PaginationResponse
 } from "@verlydotdev/async-content-lib/types";
 
 const { $menu } = useNuxtApp();
@@ -15,5 +15,6 @@ const { data, error } = useAsyncData<PaginationResponse<Group>>("menu", () =>
     <div>Nuxt module playground!</div>
 
     <pre>{{ data }}</pre>
+    <pre>{{ error }}</pre>
   </div>
 </template>

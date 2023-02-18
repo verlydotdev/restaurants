@@ -20,7 +20,7 @@
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.0.0",
+    "@nuxt/kit": "^3.2.2",
     "consola": "^2.15.3",
     "ufo": "^1.0.1"
   },
@@ -28,6 +28,6 @@
     "@nuxt/module-builder": "^0.2.1",
     "@nuxt/schema": "^3.0.0",
     "@verlydotdev/async-content-lib": "*",
-    "nuxt": "^3.0.0"
+    "nuxt": "^3.2.2"
   }
 }
