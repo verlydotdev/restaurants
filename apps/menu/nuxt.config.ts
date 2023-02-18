@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     // "@nuxtjs/i18n",
     "unplugin-icons/nuxt",
-    "@verlydotdev/nuxt-backend-module",
+    "@verlydotdev/nuxt-async-content",
   ],
   backendModule: {
     addPlugin: true,

@@ -4,7 +4,7 @@ module.exports = {
   extends: ["@verlydotdev/eslint-config-custom"],
   settings: {
     next: {
-      rootDir: ["apps/*/"],
+      rootDir: ["apps/*/", "packages/*/"],
     },
   },
 };

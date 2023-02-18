@@ -31,3 +31,10 @@ yarn-error.log*
 
 # turbo
 .turbo
+
+# idea
+.idea
+
+# vscode
+.vscode
+
