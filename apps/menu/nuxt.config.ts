@@ -7,9 +7,6 @@ export default defineNuxtConfig({
     "unplugin-icons/nuxt",
     "@verlydotdev/nuxt-async-content",
   ],
-  backendModule: {
-    addPlugin: true,
-  },
   // i18n: {
   //   baseUrl: process.env.BASE_URL,
   //   langDir: "locales",
