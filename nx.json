@@ -46,7 +46,7 @@
       "style": "scss"
     }
   },
-  "defaultProject": "api",
+  "defaultProject": "menu-service",
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "sharedGlobals": [],

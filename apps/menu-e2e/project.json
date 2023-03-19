@@ -8,11 +8,11 @@
       "executor": "@nrwl/cypress:cypress",
       "options": {
         "cypressConfig": "apps/menu-e2e/cypress.json",
-        "devServerTarget": "menu:serve:development"
+        "devServerTarget": "menu-app::serve:development"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "menu:serve:production"
+          "devServerTarget": "menu-app::serve:production"
         }
       }
     },
@@ -25,5 +25,5 @@
     }
   },
   "tags": [],
-  "implicitDependencies": ["menu"]
+  "implicitDependencies": ["menu-app"]
 }
