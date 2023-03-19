@@ -1,0 +1,11 @@
+header {
+    @apply overflow-hidden w-full;
+
+    .header-top {
+        @apply flex items-center gap-6;
+
+        & > * {
+            @apply min-w-0;
+        }
+    } 
+}
