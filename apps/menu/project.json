@@ -10,13 +10,13 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/menu",
-        "index": "apps/menu/src/index.html",
+        "index": "apps/menu/src/static/index.html",
         "main": "apps/menu/src/main.ts",
-        "polyfills": "apps/menu/src/polyfills.ts",
+        "polyfills": "apps/menu/src/static/polyfills.ts",
         "tsConfig": "apps/menu/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/menu/src/favicon.ico", "apps/menu/src/assets"],
-        "styles": ["apps/menu/src/styles.scss"],
+        "assets": ["apps/menu/src/static/favicon.ico", "apps/menu/src/assets"],
+        "styles": ["apps/menu/src/assets/styles.scss"],
         "scripts": []
       },
       "configurations": {
