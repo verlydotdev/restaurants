@@ -1,5 +1,5 @@
 .is-open {
-  @apply text-primary text-sm relative flex items-center gap-2;
+  @apply text-primary text-xs relative flex items-center gap-2;
 
   .bullet {
     @apply w-2 h-2 bg-primary rounded-full relative;
