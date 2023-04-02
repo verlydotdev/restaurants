@@ -1,0 +1,12 @@
+header {
+    @apply grid gap-3;
+    @apply overflow-hidden w-full p-6;
+
+    .header-top {
+        @apply flex items-center gap-3;
+
+        & > * {
+            @apply min-w-0;
+        }
+    } 
+}

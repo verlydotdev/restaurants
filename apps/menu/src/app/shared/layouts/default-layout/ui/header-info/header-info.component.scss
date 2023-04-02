@@ -1,0 +1,8 @@
+.header-info {
+    h1 {
+        @apply text-xl font-semibold;
+    }
+    span {
+        @apply text-xs font-semibold;
+    }
+}

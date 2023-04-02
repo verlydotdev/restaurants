@@ -1,0 +1,15 @@
+.wrapper {
+    @apply w-full flex items-center justify-center;
+    @apply rounded-lg p-3 bg-gray-400/10;
+    @apply transition-all duration-300 ease-in-out;
+    @apply focus-within:ring-4 ring-primary/30;
+
+    .icon {
+        @apply absolute;
+    }
+
+    input {
+        @apply w-full;
+        @apply bg-transparent p-0 border-none outline-none focus:ring-0 text-sm;
+    }
+}
